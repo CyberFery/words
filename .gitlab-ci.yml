@@ -26,7 +26,6 @@ build:
 
 test:
   stage: test
-  needs: build
   script:
     - make test
 
