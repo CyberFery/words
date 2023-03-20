@@ -17,16 +17,16 @@ void create_temporary_valid_file(char *filename) {
     char grid_content[GRID_SIZE][GRID_SIZE] = {
         "abcdefghijkl",
         "mnopqrstuvwx",
-        "yzABCDEFGHIJK",
-        "LMNOPQRSTUVWX",
-        "YZabcdefghijk",
-        "lmnopqrstuvwx",
-        "YZABCDEFGHIJK",
-        "lmnopqrstuvwx",
-        "yzABCDEFGHIJK",
-        "LMNOPQRSTUVWX",
-        "yzabcdefghijk",
-        "lmnopqrstuvwx"
+        "yzABCDEFGHIJ",
+        "LMNOPQRSTUVW",
+        "YZabcdefghij",
+        "lmnopqrstuvw",
+        "YZABCDEFGHIJ",
+        "lmnopqrstuvw",
+        "yzABCDEFGHIJ",
+        "LMNOPQRSTUVW",
+        "yzabcdefghij",
+        "lmnopqrstuvw"
     };
 
     for (int i = 0; i < GRID_SIZE; i++) {
