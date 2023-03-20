@@ -1,18 +1,32 @@
-before_script:
-    - apt-get update -qq
-    - apt-get install -y -qq libcunit1 libcunit1-doc libcunit1-dev
-    - git clone https://github.com/bats-core/bats-core.git /tmp/bats
-    - mkdir -p /tmp/local
-    - bash /tmp/bats/install.sh /tmp/local
-    - export PATH=$PATH:/tmp/local/bin
+image: gcc:latest
 
+stages:
+  - build
+  - test
+
+variables:
+  MAKEFLAGS: "-j $(nproc)"
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - "*.o"
+
+before_script:
+  - apt-get update -qq && apt-get install -y -qq libcunit1 libcunit1-dev bats
+  - git submodule update --init --recursive
 
 build:
-    stage: build
-    script:
-        - make
+  stage: build
+  script:
+    - make
+  artifacts:
+    paths:
+      - myprogram
 
 test:
-    stage: test
-    script:
-        - make test
+  stage: test
+  needs: build
+  script:
+    - make test
+
