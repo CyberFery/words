@@ -12,7 +12,7 @@ Le programme prend un nom de fichier en argument. Le fichier doit contenir une g
 Pour exécuter le programme, utilisez la commande suivante : `./motcache <filename>`. Le programme affichera les lettres inutilisées après avoir trouvé tous les mots.
 
 ## Exemples
-Le répertoire `test_files` contient des exemples de fichiers d'entrée. Pour exécuter le programme sur l'un de ces fichiers, utilisez la commande suivante : `./wordsearch test_files/<filename>`.
+Le répertoire `test_files` contient des exemples de fichiers d'entrée. Pour exécuter le programme sur l'un de ces fichiers, utilisez la commande suivante : `./motcache test_files/<filename>`.
 
 ## Tests
 Le programme a été testé à l'aide du framework de test unitaire CUnit et du framework de test d'acceptation BATS. Pour exécuter les tests, utilisez la commande `make test`.
