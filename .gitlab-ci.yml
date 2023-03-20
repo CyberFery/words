@@ -22,7 +22,7 @@ build:
     - make
   artifacts:
     paths:
-      - myprogram
+      - motcache
 
 test:
   stage: test
