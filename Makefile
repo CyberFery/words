@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c11
 LDFLAGS = -lcunit
 TARGET = motcache
 TEST_TARGETS = test_search test_grid test_filehandler
