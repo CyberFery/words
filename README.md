@@ -16,6 +16,3 @@ Le répertoire `test_files` contient des exemples de fichiers d'entrée. Pour ex
 
 ## Tests
 Le programme a été testé à l'aide du framework de test unitaire CUnit et du framework de test d'acceptation BATS. Pour exécuter les tests, utilisez la commande `make test`.
-
-## Auteur
-Ce programme a été écrit par [Yacine Ferrat].
